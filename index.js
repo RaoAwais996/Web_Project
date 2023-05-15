@@ -5,7 +5,8 @@ app.use(express.json())
 require("dotenv").config();
 
 const userRoter = require("./Routes/userRoutes");
-
+const Userrot = require("./Routes/users")
+const postRoutes = require("./Routes/posts");
 
 app.use(express.static('Frontend'));
 
@@ -20,6 +21,8 @@ app.get('/login', (req, res) => {
 });
 
 app.use( '/auth', userRoter)
+app.use('/user', Userrot)
+app.use('/posts', postRoutes)
 
 
 app.listen(process.env.PORT||3000 , ()=>{
