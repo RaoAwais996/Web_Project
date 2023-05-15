@@ -19,7 +19,7 @@ app.get('/login', (req, res) => {
 
 });
 
-app.use( '/user', userRoter)
+app.use( '/auth', userRoter)
 
 
 app.listen(process.env.PORT||3000 , ()=>{
