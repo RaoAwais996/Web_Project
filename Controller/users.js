@@ -1,4 +1,4 @@
-const User = require("../Models/User");
+const User = require("../Modelss/User");
 // Get user by ID
  const getUser = async (req, res) => {
     console.log("hello")
